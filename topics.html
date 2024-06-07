@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- === meta === -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DiscreteHub</title>
+
+        <!-- === Favicon === -->
+        <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" size="180x180" href="assets/img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" size="512x512" href="assets/img/android-chrome-512x512.png">
+        <link rel="icon" type="image/png" size="192x192" href="assets/img/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" size="32x32" href="assets/img/favicon-32x32.png">
+        <link rel="icon" type="image/png" size="16x16" href="assets/img/favicon-16x16.png">
+        <link rel="icon" type="image/png" href="assets/img/site.webmanifest">
+
+        <!-- === CSS === -->
+        <link type="text/css" rel="stylesheet" href="assets/css/topic.css">
+        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- === Style Switch -->
+        <link type="text/css" rel="stylesheet" href="assets/css/style-switch.css">
+        <link type="text/css" rel="stylesheet" href="assets/css/skins/color-1.css" class="alternate-style" title="color-1">
+        <link type="text/css" rel="stylesheet" href="assets/css/skins/color-2.css" class="alternate-style" title="color-2" disabled="true">
+        <link type="text/css" rel="stylesheet" href="assets/css/skins/color-3.css" class="alternate-style" title="color-3" disabled="true">
+        <link type="text/css" rel="stylesheet" href="assets/css/skins/color-4.css" class="alternate-style" title="color-4" disabled="true">
+        <link type="text/css" rel="stylesheet" href="assets/css/skins/color-5.css" class="alternate-style" title="color-5" disabled="true">
+    </head>
+
+    <body>
+        <!-- === Header === -->
+        <header class="header" data-header>
+            <div class="container" style="background-image: url(./assets/img/footer-bg.png);">
+                <a href="#home" class="logo">
+                    <img src="assets/img/discreteHub_dark.png" width="80" height="50" alt="DiscreteHub Home">
+                </a>
+
+                <nav class="navbar" data-navbar>
+                    <div class="wrapper">
+                        <a href="#home" class="logo">
+                            <img src="assets/img/discreteHub_light.svg" width="80" height="50" alt="DiscreteHub Home">
+                        </a>
+                        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+                            <i class="fa fa-xmark" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <ul class="navbar-list">
+                        <li class="navbar-item">
+                            <i class="fa fa-home"></i>
+                            <a href="index.html#home" class="navbar-link" data-nav-link>Home</a>
+                        </li>
+
+                        <li class="navbar-item">
+                            <i class="fa fa-file-lines"></i>
+                            <a href="module.html" class="navbar-link" data-nav-link>Modules</a>
+                        </li>
+
+                        <li class="navbar-item">
+                            <i class="fa fa-newspaper"></i>
+                            <a href="topics.html" class="navbar-link" data-nav-link>Topics</a>
+                        </li>
+
+                        <li class="navbar-item">
+                            <i class="fa fa-video"></i>
+                            <a href="videos.html" class="navbar-link" data-nav-link>Videos</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="header-action-btn nav-toggle" aria-label="open menu" data-nav-toggler>
+                        <i class="fa fa-compass"></i>
+                    </button>
+
+                    <button class="header-action-btn lumos-nox s-icon" aria-label="lumos-nox">
+                        <i class="fas"></i>
+                    </button>
+
+                    <button class="header-action-btn style-switch-toggle" aria-label="toggle switch-style">
+                        <i class="fa fa-cog fa-spin"></i>
+                    </button>
+
+                    <div class="overlay" data-nav-toggler data-overlay></div>
+                </div>
+            </div>
+
+            <!-- === Style Switch -->
+            <div class="style-switch show-theme">
+                <h4>Theme Color</h4>
+
+                <div class="theme-close" id="theme_close">
+                    <i class="fa fa-xmark"></i>
+                </div>
+
+                <div class="colors" id="color">
+                    <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+                    <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+                    <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+                    <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+                    <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- === Main === -->
+        <main>
+            <article>
+                <!-- === Topics === -->
+                <section class="section topic" id="topics" aria-label="topic">
+                    <div class="container">
+            
+                        <p class="section-subtitle">Topics</p>
+            
+                        <h2 class="h2 section-title">Pick A Topic</h2>
+            
+                        <ul class="grid-list">
+                            <li>
+                                <div class="topic-card">
+                                    <figure class="card-banner img-holder" style="--width: 300; --height: 220;">
+                                        <img src="./assets/img/img-topics/biconditional/Slide1.PNG" width="370" height="220" loading="lazy"
+                                        alt="topic" class="img-cover">
+                                    </figure>
+            
+                                    <div class="card-content">                                     
+                                        <h3 class="h3">
+                                            <p class="card-title">Biconditional (If and only if)</p>
+                                        </h3>
+                                    </div>
+
+                                    <a href="biconditional.html" class="btn has-before">
+                                        <span class="span">Read Topic</span>
+                                        <i class="fa fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="topic-card">
+                                    <figure class="card-banner img-holder" style="--width: 300; --height: 220;">
+                                        <img src="./assets/img/img-topics/boolean/Slide1.PNG" width="370" height="220" loading="lazy"
+                                        alt="topic" class="img-cover">
+                                    </figure>
+            
+                                    <div class="card-content">                                     
+                                        <h3 class="h3">
+                                            <p class="card-title">Boolean Algebra</p>
+                                        </h3>
+                                    </div>
+
+                                    <a href="boolean.html" class="btn has-before">
+                                        <span class="span">Read Topic</span>
+                                        <i class="fa fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="topic-card">
+                                    <figure class="card-banner img-holder" style="--width: 300; --height: 220;">
+                                        <img src="./assets/img/img-topics/compound/Slide1.PNG" width="370" height="220" loading="lazy"
+                                        alt="topic" class="img-cover">
+                                    </figure>
+            
+                                    <div class="card-content">                                     
+                                        <h3 class="h3">
+                                            <p class="card-title">Compound Proposition</p>
+                                        </h3>
+                                    </div>
+
+                                    <a href="compound.html" class="btn has-before">
+                                        <span class="span">Read Topic</span>
+                                        <i class="fa fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="topic-card">
+                                    <figure class="card-banner img-holder" style="--width: 300; --height: 220;">
+                                        <img src="./assets/img/img-topics/conjunction/Slide1.PNG" width="370" height="220" loading="lazy"
+                                        alt="topic" class="img-cover">
+                                    </figure>
+            
+                                    <div class="card-content">                                     
+                                        <h3 class="h3">
+                                            <p class="card-title">Conjunction (AND)</p>
+                                        </h3>
+                                    </div>
+
+                                    <a href="conjunction.html" class="btn has-before">
+                                        <span class="span">Read Topic</span>
+                                        <i class="fa fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="topic-card">
+                                    <figure class="card-banner img-holder" style="--width: 300; --height: 220;">
+                                        <img src="./assets/img/img-topics/disjunction/Slide1.PNG" width="370" height="220" loading="lazy"
+                                        alt="topic" class="img-cover">
+                                    </figure>
+            
+                                    <div class="card-content">                                     
+                                        <h3 class="h3">
+                                            <p class="card-title">Disjunction (OR)</p>
+                                        </h3>
+                                    </div>
+
+                                    <a href="disjunction.html" class="btn has-before">
+                                        <span class="span">Read Topic</span>
+                                        <i class="fa fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="topic-card">
+                                    <figure class="card-banner img-holder" style="--width: 300; --height: 220;">
+                                        <img src="./assets/img/img-topics/implication/Slide1.PNG" width="370" height="220" loading="lazy"
+                                        alt="topic" class="img-cover">
+                                    </figure>
+            
+                                    <div class="card-content">                                     
+                                        <h3 class="h3">
+                                            <p class="card-title">Implication (If...then)</p>
+                                        </h3>
+                                    </div>
+
+                                    <a href="implication.html" class="btn has-before">
+                                        <span class="span">Read Topic</span>
+                                        <i class="fa fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="topic-card">
+                                    <figure class="card-banner img-holder" style="--width: 300; --height: 220;">
+                                        <img src="./assets/img/img-topics/equivalence/Slide1.PNG" width="370" height="220" loading="lazy"
+                                        alt="topic" class="img-cover">
+                                    </figure>
+            
+                                    <div class="card-content">                                     
+                                        <h3 class="h3">
+                                            <p class="card-title">Laws of Equivalence</p>
+                                        </h3>
+                                    </div>
+
+                                    <a href="equivalence.html" class="btn has-before">
+                                        <span class="span">Read Topic</span>
+                                        <i class="fa fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="topic-card">
+                                    <figure class="card-banner img-holder" style="--width: 300; --height: 220;">
+                                        <img src="./assets/img/img-topics/negation/Slide1.PNG" width="370" height="220" loading="lazy"
+                                        alt="topic" class="img-cover">
+                                    </figure>
+            
+                                    <div class="card-content">                                     
+                                        <h3 class="h3">
+                                            <p class="card-title">Negation (NOT)</p>
+                                        </h3>
+                                    </div>
+
+                                    <a href="negation.html" class="btn has-before">
+                                        <span class="span">Read Topic</span>
+                                        <i class="fa fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="topic-card">
+                                    <figure class="card-banner img-holder" style="--width: 300; --height: 220;">
+                                        <img src="./assets/img/img-topics/inference/Slide1.PNG" width="370" height="220" loading="lazy"
+                                        alt="topic" class="img-cover">
+                                    </figure>
+            
+                                    <div class="card-content">                                     
+                                        <h3 class="h3">
+                                            <p class="card-title">Rules of Inference</p>
+                                        </h3>
+                                    </div>
+
+                                    <a href="inference.html" class="btn has-before">
+                                        <span class="span">Read Topic</span>
+                                        <i class="fa fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="topic-card">
+                                    <figure class="card-banner img-holder" style="--width: 300; --height: 220;">
+                                        <img src="./assets/img/img-topics/set-theory/Slide1.PNG" width="370" height="220" loading="lazy"
+                                        alt="topic" class="img-cover">
+                                    </figure>
+            
+                                    <div class="card-content">                                     
+                                        <h3 class="h3">
+                                            <p class="card-title">Set of Theory</p>
+                                        </h3>
+                                    </div>
+
+                                    <a href="set-theory.html" class="btn has-before">
+                                        <span class="span">Read Topic</span>
+                                        <i class="fa fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="topic-card">
+                                    <figure class="card-banner img-holder" style="--width: 300; --height: 220;">
+                                        <img src="./assets/img/img-topics/simplified-boolean/Slide1.PNG" width="370" height="220" loading="lazy"
+                                        alt="topic" class="img-cover">
+                                    </figure>
+            
+                                    <div class="card-content">                                     
+                                        <h3 class="h3">
+                                            <p class="card-title">Simplifying Boolean Expression</p>
+                                        </h3>
+                                    </div>
+
+                                    <a href="simplified-boolean.html" class="btn has-before">
+                                        <span class="span">Read Topic</span>
+                                        <i class="fa fa-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </article>
+        </main>
+
+        <!-- === Footer === -->
+        <footer class="footer" style="background-image: url('./assets/img/footer-bg.png')">
+            <div class="footer-top">
+                <div class="container grid-list">
+                    <div class="footer-brand">
+                        <a href="#" class="logo">
+                            <img src="assets/img/discreteHub_dark.png" width="80" height="50" alt="DiscreteHub Logo">
+                        </a>
+            
+                        <p class="footer-brand-text">
+                            Thank you for visiting DiscreteHub! 
+                            If you like to know more about us, click the links.
+                            Have a good day!
+                        </p>
+                    </div>
+                    
+                    <div class="footer-box">
+                        <ul class="footer-list">
+                             <li>
+                                <p class="footer-list-title">Other Platforms</p>
+                            </li>
+
+                            <li>
+                                <a href="about.html#about" class="footer-link">About</a>
+                            </li>
+                    
+                            <li>
+                                <a href="contact.html" class="footer-link">Contact</a>
+                            </li>
+                    
+                            <li>
+                                <a href="about.html#instructor" class="footer-link">Instructor</a>
+                            </li>
+                        </ul>
+
+                        <ul class="footer-list">
+                            <li>
+                                <p class="footer-list-title">Visit Our University</p>
+                            </li>
+                
+                            <ul class="social-list">
+                                <li>
+                                    <a href="https://web.facebook.com/lspusc" class="social-link">
+                                        <i class="fa-brands fa-facebook"></i>
+                                    </a>
+                                </li>
+                
+                                <li>
+                                    <a href="https://lspu.edu.ph/campus/home/sc" class="social-link">
+                                        <i class="fa fa-earth-asia"></i>
+                                    </a>
+                                 </li>
+                             </ul>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <div class="container">
+                        <p class="copyright">
+                            Copyright 2024 All Rights Reserved by <span class="copyright-link">DiscreteHub</span> 
+
+                            <br>
+
+                            All content on this website is either created by us, licensed for our use, used with permission, or is in the public domain. 
+                            We respect the intellectual property rights of others and aim to comply with copyright laws. If you believe that your copyright has been infringed upon, please contact us immediately.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- === Back to Top === -->
+        <a href="#" class="back-top-btn" aria-label="Back to top" data-back-top-btn>
+            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+         </a>
+        
+        <!-- === JS === -->
+        <script text="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script text="text/javascript" src="assets/js/second-script.js"></script>
+        <script text="text/javascript" src="assets/js/style-switch.js"></script>
+    </body>
+</html>

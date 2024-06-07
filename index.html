@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- === meta === -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DiscreteHub</title>
+
+        <!-- === Favicon === -->
+        <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" size="180x180" href="assets/img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" size="512x512" href="assets/img/android-chrome-512x512.png">
+        <link rel="icon" type="image/png" size="192x192" href="assets/img/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" size="32x32" href="assets/img/favicon-32x32.png">
+        <link rel="icon" type="image/png" size="16x16" href="assets/img/favicon-16x16.png">
+        <link rel="icon" type="image/png" href="assets/img/site.webmanifest">
+
+        <!-- === Preload Img -->
+        <link rel="preload" as="image" href="assets/img/hero-bg.svg">
+        <link rel="preload" as="image" href="assets/img/hero-img-1.png">
+        <link rel="preload" as="image" href="assets/img/hero-img-2.png">
+        <link rel="preload" as="image" href="assets/img/hero-shape-1.png">
+
+        <!-- === CSS === -->
+        <link type="text/css" rel="stylesheet" href="assets/css/styles.css">
+        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- === Style Switch -->
+        <link type="text/css" rel="stylesheet" href="assets/css/style-switch.css">
+        <link type="text/css" rel="stylesheet" href="assets/css/skins/color-1.css" class="alternate-style" title="color-1">
+        <link type="text/css" rel="stylesheet" href="assets/css/skins/color-2.css" class="alternate-style" title="color-2" disabled="true">
+        <link type="text/css" rel="stylesheet" href="assets/css/skins/color-3.css" class="alternate-style" title="color-3" disabled="true">
+        <link type="text/css" rel="stylesheet" href="assets/css/skins/color-4.css" class="alternate-style" title="color-4" disabled="true">
+        <link type="text/css" rel="stylesheet" href="assets/css/skins/color-5.css" class="alternate-style" title="color-5" disabled="true">
+    </head>
+
+    <body>
+        <!-- === Header === -->
+        <header class="header" data-header>
+            <div class="container" style="background-image: url(./assets/img/footer-bg.png);">
+                <a href="#home" class="logo">
+                    <img src="assets/img/discreteHub_dark.png" width="80" height="50" alt="DiscreteHub Home">
+                </a>
+
+                <nav class="navbar" data-navbar>
+                    <div class="wrapper">
+                        <a href="#home" class="logo">
+                            <img src="assets/img/discreteHub_light.svg" width="80" height="50" alt="DiscreteHub Home">
+                        </a>
+                        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+                            <i class="fa fa-xmark" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <ul class="navbar-list">
+                        <li class="navbar-item">
+                            <i class="fa fa-home"></i>
+                            <a href="#home" class="navbar-link" data-nav-link>Home</a>
+                        </li>
+
+                        <li class="navbar-item">
+                            <i class="fa fa-file-lines"></i>
+                            <a href="module.html" class="navbar-link" data-nav-link>Modules</a>
+                        </li>
+
+                        <li class="navbar-item">
+                            <i class="fa fa-newspaper"></i>
+                            <a href="topics.html" class="navbar-link" data-nav-link>Topics</a>
+                        </li>
+
+                        <li class="navbar-item">
+                            <i class="fa fa-video"></i>
+                            <a href="videos.html" class="navbar-link" data-nav-link>Videos</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="header-action-btn nav-toggle" aria-label="open menu" data-nav-toggler>
+                        <i class="fa fa-compass"></i>
+                    </button>
+
+                    <button class="header-action-btn lumos-nox s-icon" aria-label="lumos-nox">
+                        <i class="fas"></i>
+                    </button>
+
+                    <button class="header-action-btn style-switch-toggle" aria-label="toggle switch-style">
+                        <i class="fa fa-cog fa-spin"></i>
+                    </button>
+
+                    <div class="overlay" data-nav-toggler data-overlay></div>
+                </div>
+            </div>
+
+            <!-- === Style Switch -->
+            <div class="style-switch show-theme">
+                <h4>Theme Color</h4>
+
+                <div class="theme-close" id="theme_close">
+                    <i class="fa fa-xmark"></i>
+                </div>
+
+                <div class="colors" id="color">
+                    <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+                    <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+                    <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+                    <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+                    <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- === Main === -->
+        <main>
+            <article>
+                <!-- === Hero === -->
+                <section class="hero has-bg-image" id="home" aria-label="home" style="background-image: url('./assets/img/hero-bg.svg')">
+                    <div class="container">
+                        <div class="hero-content">
+                            <h1 class="h1 section-title">
+                                Welcome to <span class="span">DiscreteHub</span>!
+                            </h1>
+
+                            <p class="welcome">Here at DiscreteHub you can learn about: <span class="text-typings"></span></p>
+                            
+                            <p class="hero-text">
+                                Welcome to DiscreteHub, your gateway to the world of logics.
+                                Whether you're a student, teacher, or curious mind, DiscreteHub is your go-to resource for exploring the intricate patterns of logic.
+                                Join us on this exciting journey and discover the beauty of Discrete Structures at DiscreteHub! 
+                            </p>
+
+                            <a href="topics.html" class="btn has-before">
+                                <span class="span">Find Topics</span>
+                                <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <figure class="hero-banner">
+                            <div class="img-holder one" style="--width: 270; --height: 300;">
+                                <img src="assets/img/hero-img-1.png" alt="hero img" width="270" height="300" class="img-cover">
+                            </div>
+
+                            <div class="img-holder two" style="--width: 270; --height: 300;">
+                                <img src="assets/img/hero-img-2.png" alt="hero img" width="270" height="300" class="img-cover">
+                            </div>
+
+                            <img src="assets/img/hero-shape-1.png" alt="hero shape" width="622" height="551" class="shape hero-shape-1">
+                        </figure>
+                    </div>
+                </section>
+
+                <!-- === Page From === -->
+                <section class="section from" aria-label="from">
+                    <p class="section-subtitle">We are from</p>
+
+                    <div class="lspu-sc">
+                        <p class="section-title">Laguna State Polytechnic University <br> <span class="lspu-span">Siniloan (Host) Campus</span></p>
+
+                        <div class="slideshow-container">
+                            <div class="slides fade">
+                                <img src="assets/img/sc-1.png" style="width: 100%;" alt="LSPU">
+                            </div>
+
+                            <div class="slides fade">
+                                <img src="assets/img/sc-2.png" style="width: 100%;" alt="LSPU">
+                            </div>
+
+                            <div class="slides fade">
+                                <img src="assets/img/sc-3.png" style="width: 100%;" alt="LSPU">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+
+                    <div style="text-align: center;">
+                        <span class="dot" onclick="currentSlideManual(1)"></span>
+                        <span class="dot" onclick="currentSlideManual(2)"></span>
+                        <span class="dot" onclick="currentSlideManual(3)"></span>
+                    </div>
+
+                    <div class="container">
+                        <ul class="grid-list">
+                            <li>
+                                <div class="from-card" style="background-color: hsl(0, 71%, 81%)">
+                                    <h3 class="h3">
+                                        <p class="card-title" style="background: #F72300;">Vision</p>
+                                    </h3>
+
+                                    <p class="card-text">
+                                        LSPU is a center of technological innovation that promotes interdisciplinary learning,
+                                        sustainable utilization of resources, collaboration, and partnership with the community
+                                        and stakeholders.
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="from-card" style="background-color: hsl(201, 42%, 85%)">
+                                    <h3 class="h3">
+                                        <p class="card-title" style="background: #3A98C9;">Mission</p>
+                                    </h3>
+
+                                    <p class="card-text">
+                                        LSPU, driven by progressive leadership, is a premier institution providing technology-mediated agriculture, 
+                                        fisheries and other related and emerging disciplines significantly contributing to the growth and development 
+                                        of the region and nation.
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="from-card" style="background-color: hsl(175, 61%, 81%)">
+                                    <h3 class="h3">
+                                        <p class="card-title"  style="background: #0ED6CA;">Quality Policy</p>
+                                    </h3>
+
+                                    <p class="card-text">
+                                        LSPU delivers quality education through responsive instruction, distinctive research, sustainable extension and production services. 
+                                        Thus, we are committed with continual improvement to meet applicable requirements to provide quality, efficient and effective services 
+                                        to the university stakeholder's highest level of satisfaction through an excellent management system imbued with utmost integrity, 
+                                        professionalism and innovation.
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="from-card" style="background-color: hsl(138, 54%, 78%)">
+                                    <h3 class="h3">
+                                        <p class="card-title"  style="background: #00902C;">Group Values</p>
+                                    </h3>
+
+                                    <p class="card-text-gv">
+                                        Integrity <br>
+                                        Professionalism <br>
+                                        Innovation <br>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- === Modules === -->
+                <section class="section module" id="modules" aria-label="module">
+                    <div class="container">
+            
+                        <p class="section-subtitle">Modules</p>
+            
+                        <h2 class="h2 section-title">Pick A Module To Get Started</h2>
+            
+                        <ul class="grid-list">
+            
+                            <li>
+                                <div class="module-card">
+            
+                                    <figure class="card-banner img-holder" style="--width: 300; --height: 220;">
+                                        <img src="./assets/img/img-modules/m-1.png" width="370" height="220" loading="lazy"
+                                        alt="module" class="img-cover">
+                                    </figure>
+            
+                                    <div class="abs-badge">
+                                        <i class="fa fa-clock"></i>
+                                        <span class="span">1 Week</span>
+                                    </div>
+            
+                                    <div class="card-content">                                     
+                                        <h3 class="h3">
+                                            <a href="#" class="card-title">Module 1: Introduction to Propositional Logic</a>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </li>
+            
+                            <li>
+                                <div class="module-card">
+            
+                                    <figure class="card-banner img-holder" style="--width: 300; --height: 220;">
+                                        <img src="./assets/img/img-modules/m-2.png" width="370" height="220" loading="lazy"
+                                        alt="module" class="img-cover">
+                                    </figure>
+            
+                                    <div class="abs-badge">
+                                        <i class="fa fa-clock"></i>
+                                        <span class="span">1 Week</span>
+                                    </div>
+            
+                                    <div class="card-content">                                     
+                                        <h3 class="h3">
+                                            <a href="#" class="card-title">Module 2: Compound Proposition</a>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </li>   
+            
+                            <li>
+                                <div class="module-card">
+            
+                                    <figure class="card-banner img-holder" style="--width: 300; --height: 220;">
+                                        <img src="./assets/img/img-modules/m-3.png" width="370" height="220" loading="lazy"
+                                        alt="module" class="img-cover">
+                                    </figure>
+            
+                                    <div class="abs-badge">
+                                        <i class="fa fa-clock"></i>
+                                        <span class="span">1 Week</span>
+                                    </div>
+            
+                                    <div class="card-content">                                     
+                                        <h3 class="h3">
+                                            <a href="#" class="card-title">Module 3: Laws of Equivalence</a>
+                                        </h3>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+            
+                        <a href="module.html" class="btn has-before">
+                            <span class="span">Browse more modules</span>
+                            <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- === Videos === -->
+                <section class="section video has-bg-image" id="video" aria-label="video" style="background-image: url(./assets/img/topics-bg.svg);">
+                    <div class="container">
+                        <p class="section-subtitle">Videos</p>
+                        
+                        <h2 class="h2 section-title">Learn With DiscreteHub</h2>
+
+                        <ul class="grid-list">
+                            <li>
+                                <div class="video-card">
+                                    <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                                            <img src="assets/img/img-videos/biconditional.png" width="370" height="370" loading="lazy"
+                                            alt="video" class="img-cover">
+                                    </figure>
+                    
+                                    <div class="card-content">
+                                        <!-- <a href="videos.html#biconditional" class="card-btn" aria-label="read more">
+                                            <i class="fa fa-arrow-right"></i>
+                                        </a> -->
+                        
+                                        <h3 class="h3">
+                                            <p class="card-title">Mastering Biconditional Logic: The Guide</p>
+                                        </h3>
+                        
+                                        <p class="card-text">
+                                            Learn how to navigate and solve problems involving biconditional logic with clear examples and expert tips.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="video-card">
+                                    <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                                            <img src="assets/img/img-videos/boolean.png" width="370" height="370" loading="lazy"
+                                            alt="video" class="img-cover">
+                                    </figure>
+                    
+                                    <div class="card-content">                    
+                                        <h3 class="h3">
+                                            <p class="card-title">From Logic to Reality: Mastering Boolean Algebra and Logic Gates</p>
+                                        </h3>
+                        
+                                        <p class="card-text">
+                                            Dive deep into the world of Boolean algebra and logic gates to understand how it works.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="video-card">
+                                    <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                                            <img src="assets/img/img-videos/compound-proposition.png" width="370" height="370" loading="lazy"
+                                            alt="video" class="img-cover">
+                                    </figure>
+                    
+                                    <div class="card-content">                         
+                                        <h3 class="h3">
+                                            <p class="card-title">Cracking the Code of Compound Propositions</p>
+                                        </h3>
+                        
+                                        <p class="card-text">
+                                            Explore the complexities of compound propositions and their applications in logic and mathematics.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <a href="videos.html" class="btn has-before">
+                            <span class="span">Watch videos </span>
+                            <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </section>
+
+            </article>
+        </main>
+
+        <!-- === Footer === -->
+        <footer class="footer" style="background-image: url('./assets/img/footer-bg.png')">
+            <div class="footer-top">
+                <div class="container grid-list">
+                    <div class="footer-brand">
+                        <a href="#" class="logo">
+                            <img src="assets/img/discreteHub_dark.png" width="80" height="50" alt="DiscreteHub Logo">
+                        </a>
+            
+                        <p class="footer-brand-text">
+                            Thank you for visiting DiscreteHub! 
+                            If you like to know more about us, click the links.
+                            Have a good day!
+                        </p>
+                    </div>
+                    
+                    <div class="footer-box">
+                        <ul class="footer-list">
+                             <li>
+                                <p class="footer-list-title">Other Platforms</p>
+                            </li>
+
+                            <li>
+                                <a href="about.html" class="footer-link">About</a>
+                            </li>
+                    
+                            <li>
+                                <a href="contact.html" class="footer-link">Contact</a>
+                            </li>
+                    
+                            <li>
+                                <a href="about.html#instructor" class="footer-link">Instructor</a>
+                            </li>
+                        </ul>
+
+                        <ul class="footer-list">
+                            <li>
+                                <p class="footer-list-title">Visit Our University</p>
+                            </li>
+                
+                            <ul class="social-list">
+                                <li>
+                                    <a href="https://web.facebook.com/lspusc" class="social-link">
+                                        <i class="fa-brands fa-facebook"></i>
+                                    </a>
+                                </li>
+                
+                                <li>
+                                    <a href="https://lspu.edu.ph/campus/home/sc" class="social-link">
+                                        <i class="fa fa-earth-asia"></i>
+                                    </a>
+                                 </li>
+                             </ul>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <div class="container">
+                        <p class="copyright">
+                            Copyright 2024 All Rights Reserved by <span class="copyright-link">DiscreteHub</span> 
+
+                            <br>
+
+                            All content on this website is either created by us, licensed for our use, used with permission, or is in the public domain. 
+                            We respect the intellectual property rights of others and aim to comply with copyright laws. If you believe that your copyright has been infringed upon, please contact us immediately.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- === Back to Top === -->
+        <a href="#" class="back-top-btn" aria-label="Back to top" data-back-top-btn>
+            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+         </a>
+        
+        <!-- === JS === -->
+        <script text="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script text="text/javascript" src="assets/js/script.js"></script>
+        <script text="text/javascript" src="assets/js/style-switch.js"></script>
+    </body>
+</html>

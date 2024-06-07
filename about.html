@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- === meta === -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DiscreteHub</title>
+
+        <!-- === Favicon === -->
+        <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" size="180x180" href="assets/img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" size="512x512" href="assets/img/android-chrome-512x512.png">
+        <link rel="icon" type="image/png" size="192x192" href="assets/img/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" size="32x32" href="assets/img/favicon-32x32.png">
+        <link rel="icon" type="image/png" size="16x16" href="assets/img/favicon-16x16.png">
+        <link rel="icon" type="image/png" href="assets/img/site.webmanifest">
+
+        <!-- === CSS === -->
+        <link type="text/css" rel="stylesheet" href="assets/css/styles.css">
+        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- === Style Switch -->
+        <link type="text/css" rel="stylesheet" href="assets/css/style-switch.css">
+        <link type="text/css" rel="stylesheet" href="assets/css/skins/color-1.css" class="alternate-style" title="color-1">
+        <link type="text/css" rel="stylesheet" href="assets/css/skins/color-2.css" class="alternate-style" title="color-2" disabled="true">
+        <link type="text/css" rel="stylesheet" href="assets/css/skins/color-3.css" class="alternate-style" title="color-3" disabled="true">
+        <link type="text/css" rel="stylesheet" href="assets/css/skins/color-4.css" class="alternate-style" title="color-4" disabled="true">
+        <link type="text/css" rel="stylesheet" href="assets/css/skins/color-5.css" class="alternate-style" title="color-5" disabled="true">
+    </head>
+
+    <body>
+        <!-- === Header === -->
+        <header class="header" data-header>
+            <div class="container" style="background-image: url(./assets/img/footer-bg.png);">
+                <a href="#home" class="logo">
+                    <img src="assets/img/discreteHub_dark.png" width="80" height="50" alt="DiscreteHub Home">
+                </a>
+
+                <nav class="navbar" data-navbar>
+                    <div class="wrapper">
+                        <a href="#home" class="logo">
+                            <img src="assets/img/discreteHub_light.svg" width="80" height="50" alt="DiscreteHub Home">
+                        </a>
+                        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+                            <i class="fa fa-xmark" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <ul class="navbar-list">
+                        <li class="navbar-item">
+                            <i class="fa fa-home"></i>
+                            <a href="index.html#home" class="navbar-link" data-nav-link>Home</a>
+                        </li>
+
+                        <li class="navbar-item">
+                            <i class="fa fa-file-lines"></i>
+                            <a href="module.html" class="navbar-link" data-nav-link>Modules</a>
+                        </li>
+
+                        <li class="navbar-item">
+                            <i class="fa fa-newspaper"></i>
+                            <a href="topics.html" class="navbar-link" data-nav-link>Topics</a>
+                        </li>
+
+                        <li class="navbar-item">
+                            <i class="fa fa-video"></i>
+                            <a href="videos.html" class="navbar-link" data-nav-link>Videos</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="header-action-btn nav-toggle" aria-label="open menu" data-nav-toggler>
+                        <i class="fa fa-compass"></i>
+                    </button>
+
+                    <button class="header-action-btn lumos-nox s-icon" aria-label="lumos-nox">
+                        <i class="fas"></i>
+                    </button>
+
+                    <button class="header-action-btn style-switch-toggle" aria-label="toggle switch-style">
+                        <i class="fa fa-cog fa-spin"></i>
+                    </button>
+
+                    <div class="overlay" data-nav-toggler data-overlay></div>
+                </div>
+            </div>
+
+            <!-- === Style Switch -->
+            <div class="style-switch show-theme">
+                <h4>Theme Color</h4>
+
+                <div class="theme-close" id="theme_close">
+                    <i class="fa fa-xmark"></i>
+                </div>
+
+                <div class="colors" id="color">
+                    <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+                    <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+                    <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+                    <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+                    <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- === Main === -->
+        <main>
+            <article>
+                <!-- === About === -->
+                <section class="about section" id="about" aria-label="about">
+                    <div class="container">
+                        <div class="about-content">
+                            <h1 class="h1 section-title">
+                                About Us
+                            </h1>
+
+                            <p class="about-intro">We are students from <span class="span">BSCS - 1A</span></p>
+                            
+                            <p class="about-text">
+                                Our group is a dynamic team composed of five carefully selected members who have come together to collaborate on an exciting final project. 
+                                Each member brings a unique set of skills and perspectives to the table, 
+                                ensuring a well-rounded approach to problem-solving and innovation. 
+                                With a shared passion for excellence and teamwork, 
+                                Our group is committed to delivering outstanding results and making a positive impact. 
+                                We invite you to explore our journey and discover how our diverse backgrounds and expertise contribute to our success.
+                            </p>
+
+                            <p class="about-intro">
+                                <i class="fa fa-circle-info"></i>About our website
+                            </p>
+                            
+                            <p class="about-text">
+                                Welcome to our website dedicated to the final project of Discrete Structures 1. This website serves as a culmination of our learning and exploration in the field of discrete structures, 
+                                and we are excited to share our project with you.
+                                Thank you for visiting our website. We hope you find our project informative and engaging. If you have any questions or feedback, please feel free to reach out to us. <br>
+
+                                <span class="credit">Credits:</span> <br>
+
+                                Open Source Codes: We acknowledge and appreciate the contributions of the open-source community. 
+                                All codes used on this website are open-source and credited to their rightful owners. <br>
+                                Images and Websites: All images and website that used in this website are credited to their rightful owners. <br>
+                            </p>
+                        </div>
+
+                        
+                        <div class="container">
+                            <div class="member">
+                                <h2 class="h2 member">Members</h2>
+                            </div>
+                        </div>
+    
+                        <div class="grid-list">
+                            <div class="container">
+                                <figure class="about-banner img-holder" style="--width: 370; --height: 370;">
+                                    <img src="assets/img/member-1.png" width="370" height="370" loading="lazy"
+                                    alt="video" class="img-cover">
+                                </figure>
+            
+                                <div class="about-content">                    
+                                    <h3 class="h3">
+                                    <p class="about-title">AFURONG, VLUEVERRIE M.</p>
+                                    </h3>
+                                </div>
+                            </div>
+    
+                            <div class="container">
+                                <figure class="about-banner img-holder" style="--width: 370; --height: 370;">
+                                    <img src="assets/img/member-2.png" width="370" height="370" loading="lazy"
+                                    alt="video" class="img-cover">
+                                </figure>
+            
+                                <div class="about-content">                    
+                                    <h3 class="h3">
+                                    <p class="about-title">AGBAGALA, MARIEL SHANE V.</p>
+                                    </h3>
+                                </div>
+                            </div>
+    
+                            <div class="container">
+                                <figure class="about-banner img-holder" style="--width: 370; --height: 370;">
+                                    <img src="assets/img/member-3.png" width="370" height="370" loading="lazy"
+                                    alt="video" class="img-cover">
+                                </figure>
+            
+                                <div class="about-content">                    
+                                    <h3 class="h3">
+                                    <p class="about-title">MAGANO, KYLE ROBIE E.</p>
+                                    </h3>
+                                </div>
+                            </div>
+    
+                            <div class="container">
+                                <figure class="about-banner img-holder" style="--width: 370; --height: 370;">
+                                    <img src="assets/img/member-4.png" width="370" height="370" loading="lazy"
+                                    alt="video" class="img-cover">
+                                </figure>
+            
+                                <div class="about-content">                    
+                                    <h3 class="h3">
+                                    <p class="about-title">MANAHAN, KEN LORENZ M.</p>
+                                    </h3>
+                                </div>
+                            </div>
+    
+                            <div class="container">
+                                <figure class="about-banner img-holder" style="--width: 370; --height: 370;">
+                                    <img src="assets/img/member-5.png" width="370" height="370" loading="lazy"
+                                    alt="video" class="img-cover">
+                                </figure>
+            
+                                <div class="about-content">                    
+                                    <h3 class="h3">
+                                    <p class="about-title">PACHECO, JEROME B.</p>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="container">
+                            <div class="language">
+                                <h2 class="h2 language">Languages</h2>
+                            </div>
+                        </div>
+    
+                        <div>
+                            <div class="container progress-line">
+                                <div class="progress-bar">
+                                    <div class="lang-type">
+                                        <h5>HTML</h5>
+                                        <div class="progress">
+                                            <div class="lang-percent">47.1%</div>
+                                            <div class="progress-in" style="width: 47.1%;"></div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="lang-type">
+                                        <h5>CSS</h5>
+                                        <div class="progress">
+                                            <div class="lang-percent">16.1%</div>
+                                            <div class="progress-in" style="width: 16.1%;"></div>
+                                        </div>
+                                    </div>
+        
+                                    <div class="lang-type">
+                                        <h5>JavaScript</h5>
+                                        <div class="progress">
+                                            <div class="lang-percent">36.8%</div>
+                                            <div class="progress-in" style="width: 36.8%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="container">
+                        <ul class="grid-list">
+                            <li>
+                                <div class="about-card">
+                                    <h3 class="h3">
+                                        <p class="card-title">
+                                            <i class="fa fa-code"></i>Open Source Codes
+                                        </p>
+                                    </h3>
+
+                                    <p class="card-text">
+                                        Google Fonts<br>
+                                        cndjs:<br>
+                                        <span class="span">
+                                            Font Awesome<br>
+                                        </span>
+    
+                                        <span class="span">
+                                            typed.js
+                                        </span>
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="about-card">
+                                    <h3 class="h3">
+                                        <h3 class="h3">
+                                            <p class="card-title">
+                                                <i class="fa fa-toolbox"></i>Tools and Technologies
+                                            </p>
+                                        </h3>
+        
+                                        <p class="card-text">
+                                            Adobe Photoshop <br>
+                                            Google Drive<br>
+                                            Visual Studio Code
+                                        </p>
+                                    </h3>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="about-card">
+                                    <h3 class="h3">
+                                        <p class="card-title">
+                                            <i class="fa fa-images"></i>Images and Websites
+                                        </p>
+                                    </h3>
+
+                                    <p class="card-text">
+                                        Favicon<br>
+                                        Freepik<br>
+                                        GitHub<br>
+                                        Facebook<br>
+                                        YouTube
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="instructor" id="instructor" aria-label="instructor">
+                    <div class="container">
+                        <div class="instructor">
+                            <h2 class="h2 instructor">MEET OUR SUBJECT INSTRUCTOR</h2>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <figure class="instructor-banner img-holder" style="--width: 370; --height: 370;">
+                            <img src="assets/img/instructor.png" width="370" height="370" loading="lazy"
+                            alt="video" class="img-cover">
+                        </figure>
+        
+                        <div class="instructor-content">                    
+                            <h3 class="h3">
+                                <p class="instructor-title">PROFESSOR JASMIN DE GUIA</p>
+                            </h3>
+
+                            <p class="card-text">
+                                Welcome to our "Meet Our Subject Instructor" section! We are proud to introduce Professor Jasmin De Guia, 
+                                our talented and dedicated instructor who brings a wealth of knowledge and passion to their teaching. 
+                                Professor Jasmin De Guia is a seasoned expert in her field, committed to providing an exceptional learning experience and guiding you towards your goals. 
+                                Give her a round of applause! <br> This final project is submitted to Professor Jasmin De Guia
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </main>
+
+        <!-- === Footer === -->
+        <footer class="footer" style="background-image: url('./assets/img/footer-bg.png')">
+            <div class="footer-top">
+                <div class="container grid-list">
+                    <div class="footer-brand">
+                        <a href="#" class="logo">
+                            <img src="assets/img/discreteHub_dark.png" width="80" height="50" alt="DiscreteHub Logo">
+                        </a>
+            
+                        <p class="footer-brand-text">
+                            Thank you for visiting DiscreteHub! 
+                            If you like to know more about us, click the links.
+                            Have a good day!
+                        </p>
+                    </div>
+                    
+                    <div class="footer-box">
+                        <ul class="footer-list">
+                             <li>
+                                <p class="footer-list-title">Other Platforms</p>
+                            </li>
+
+                            <li>
+                                <a href="#about" class="footer-link">About</a>
+                            </li>
+                    
+                            <li>
+                                <a href="contact.html" class="footer-link">Contact</a>
+                            </li>
+                    
+                            <li>
+                                <a href="#instructor" class="footer-link">Instructor</a>
+                            </li>
+                        </ul>
+
+                        <ul class="footer-list">
+                            <li>
+                                <p class="footer-list-title">Visit Our University</p>
+                            </li>
+                
+                            <ul class="social-list">
+                                <li>
+                                    <a href="https://web.facebook.com/lspusc" class="social-link">
+                                        <i class="fa-brands fa-facebook"></i>
+                                    </a>
+                                </li>
+                
+                                <li>
+                                    <a href="https://lspu.edu.ph/campus/home/sc" class="social-link">
+                                        <i class="fa fa-earth-asia"></i>
+                                    </a>
+                                 </li>
+                             </ul>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <div class="container">
+                        <p class="copyright">
+                            Copyright 2024 All Rights Reserved by <span class="copyright-link">DiscreteHub</span> 
+
+                            <br>
+
+                            All content on this website is either created by us, licensed for our use, used with permission, or is in the public domain. 
+                            We respect the intellectual property rights of others and aim to comply with copyright laws. If you believe that your copyright has been infringed upon, please contact us immediately.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- === Back to Top === -->
+        <a href="#" class="back-top-btn" aria-label="Back to top" data-back-top-btn>
+            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+         </a>
+        
+        <!-- === JS === -->
+        <script text="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script text="text/javascript" src="assets/js/second-script.js"></script>
+        <script text="text/javascript" src="assets/js/style-switch.js"></script>
+    </body>
+</html>

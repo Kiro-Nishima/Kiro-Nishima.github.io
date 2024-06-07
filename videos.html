@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- === meta === -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DiscreteHub</title>
+
+        <!-- === Favicon === -->
+        <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" size="180x180" href="assets/img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" size="512x512" href="assets/img/android-chrome-512x512.png">
+        <link rel="icon" type="image/png" size="192x192" href="assets/img/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" size="32x32" href="assets/img/favicon-32x32.png">
+        <link rel="icon" type="image/png" size="16x16" href="assets/img/favicon-16x16.png">
+        <link rel="icon" type="image/png" href="assets/img/site.webmanifest">
+
+        <!-- === CSS === -->
+        <link type="text/css" rel="stylesheet" href="assets/css/styles.css">
+        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- === Style Switch -->
+        <link type="text/css" rel="stylesheet" href="assets/css/style-switch.css">
+        <link type="text/css" rel="stylesheet" href="assets/css/skins/color-1.css" class="alternate-style" title="color-1">
+        <link type="text/css" rel="stylesheet" href="assets/css/skins/color-2.css" class="alternate-style" title="color-2" disabled="true">
+        <link type="text/css" rel="stylesheet" href="assets/css/skins/color-3.css" class="alternate-style" title="color-3" disabled="true">
+        <link type="text/css" rel="stylesheet" href="assets/css/skins/color-4.css" class="alternate-style" title="color-4" disabled="true">
+        <link type="text/css" rel="stylesheet" href="assets/css/skins/color-5.css" class="alternate-style" title="color-5" disabled="true">
+    </head>
+
+    <body>
+        <!-- === Header === -->
+        <header class="header" data-header>
+            <div class="container" style="background-image: url(./assets/img/footer-bg.png);">
+                <a href="#home" class="logo">
+                    <img src="assets/img/discreteHub_dark.png" width="80" height="50" alt="DiscreteHub Home">
+                </a>
+
+                <nav class="navbar" data-navbar>
+                    <div class="wrapper">
+                        <a href="#home" class="logo">
+                            <img src="assets/img/discreteHub_light.svg" width="80" height="50" alt="DiscreteHub Home">
+                        </a>
+                        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+                            <i class="fa fa-xmark" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <ul class="navbar-list">
+                        <li class="navbar-item">
+                            <i class="fa fa-home"></i>
+                            <a href="index.html#home" class="navbar-link" data-nav-link>Home</a>
+                        </li>
+
+                        <li class="navbar-item">
+                            <i class="fa fa-file-lines"></i>
+                            <a href="module.html" class="navbar-link" data-nav-link>Modules</a>
+                        </li>
+
+                        <li class="navbar-item">
+                            <i class="fa fa-newspaper"></i>
+                            <a href="topics.html" class="navbar-link" data-nav-link>Topics</a>
+                        </li>
+
+                        <li class="navbar-item">
+                            <i class="fa fa-video"></i>
+                            <a href="videos.html" class="navbar-link" data-nav-link>Videos</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="header-action-btn nav-toggle" aria-label="open menu" data-nav-toggler>
+                        <i class="fa fa-compass"></i>
+                    </button>
+
+                    <button class="header-action-btn lumos-nox s-icon" aria-label="lumos-nox">
+                        <i class="fas"></i>
+                    </button>
+
+                    <button class="header-action-btn style-switch-toggle" aria-label="toggle switch-style">
+                        <i class="fa fa-cog fa-spin"></i>
+                    </button>
+
+                    <div class="overlay" data-nav-toggler data-overlay></div>
+                </div>
+            </div>
+
+            <!-- === Style Switch -->
+            <div class="style-switch show-theme">
+                <h4>Theme Color</h4>
+
+                <div class="theme-close" id="theme_close">
+                    <i class="fa fa-xmark"></i>
+                </div>
+
+                <div class="colors" id="color">
+                    <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+                    <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+                    <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+                    <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+                    <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- === Main === -->
+        <main>
+            <article>
+                <!-- === Videos === -->
+                <section class="section video" id="video" aria-label="video">
+                    <div class="container">
+                        <p class="section-subtitle videos">Videos</p>
+                        
+                        <h2 class="h2 section-title videos">Learn With DiscreteHub</h2>
+
+                        <ul class="grid-list">
+                            <li>
+                                <div class="video-card" id="biconditional">
+                                    <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                                            <img src="assets/img/img-videos/biconditional.png" width="370" height="370" loading="lazy"
+                                            alt="video" class="img-cover">
+                                    </figure>
+                    
+                                    <div class="card-content">
+                                        <a href="https://drive.google.com/file/d/1iu0yP17t4O84uz68M3UMb4S9OhnOIM1x/view" class="card-btn" aria-label="read more">
+                                            <i class="fa fa-play"></i>
+                                        </a>
+                        
+                                        <h3 class="h3">
+                                            <a href="https://drive.google.com/file/d/1iu0yP17t4O84uz68M3UMb4S9OhnOIM1x/view" class="card-title">Mastering Biconditional Logic: The Guide</a>
+                                        </h3>
+                        
+                                        <p class="card-text">
+                                            Learn how to navigate and solve problems involving biconditional logic with clear examples and expert tips.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="video-card" id="boolean">
+                                    <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                                            <img src="assets/img/img-videos/boolean.png" width="370" height="370" loading="lazy"
+                                            alt="video" class="img-cover">
+                                    </figure>
+                    
+                                    <div class="card-content">
+                                        <a href="https://drive.google.com/file/d/1vZH2MBx02R-rEAw7yxmZmT_vp7BH5Meq/view" class="card-btn" aria-label="read more">
+                                             <i class="fa fa-play"></i>
+                                        </a>
+                        
+                                        <h3 class="h3">
+                                            <a href="https://drive.google.com/file/d/1vZH2MBx02R-rEAw7yxmZmT_vp7BH5Meq/view" class="card-title">From Logic to Reality: Mastering Boolean Algebra and Logic Gates</a>
+                                        </h3>
+                        
+                                        <p class="card-text">
+                                            Dive deep into the world of Boolean algebra and logic gates to understand how it works.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="video-card" id="compound">
+                                    <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                                            <img src="assets/img/img-videos/compound-proposition.png" width="370" height="370" loading="lazy"
+                                            alt="video" class="img-cover">
+                                    </figure>
+                    
+                                    <div class="card-content">  
+                                        <a href="https://drive.google.com/file/d/1o28xV7whE9XHOzSnxDr_zSa4kBxCbWBN/view" class="card-btn" aria-label="read more">
+                                             <i class="fa fa-play"></i>
+                                        </a>
+                        
+                                        <h3 class="h3">
+                                            <a href="https://drive.google.com/file/d/1o28xV7whE9XHOzSnxDr_zSa4kBxCbWBN/view" class="card-title">Cracking the Code of Compound Propositions</a>
+                                        </h3>
+                        
+                                        <p class="card-text">
+                                            Explore the complexities of compound propositions and their applications in logic and mathematics.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="video-card">
+                                    <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                                            <img src="assets/img/img-videos/conjunction.png" width="370" height="370" loading="lazy"
+                                            alt="video" class="img-cover">
+                                    </figure>
+                    
+                                    <div class="card-content">  
+                                        <a href="https://drive.google.com/file/d/1ie5_u92-7HXdsYP2Eo4aqqprjovlFxpu/view" class="card-btn" aria-label="read more">
+                                             <i class="fa fa-play"></i>
+                                        </a>
+                        
+                                        <h3 class="h3">
+                                            <a href="https://drive.google.com/file/d/1ie5_u92-7HXdsYP2Eo4aqqprjovlFxpu/view" class="card-title">Conjunction: Simplifying Logical Conjunctions</a>
+                                        </h3>
+                        
+                                        <p class="card-text">
+                                            Discover the power of logical conjunctions and how they shape reasoning and decision-making
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="video-card">
+                                    <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                                            <img src="assets/img/img-videos/disjunction.png" width="370" height="370" loading="lazy"
+                                            alt="video" class="img-cover">
+                                    </figure>
+                    
+                                    <div class="card-content">  
+                                        <a href="https://drive.google.com/file/d/1igLWdo3bYJsk-6rOdWKJg83j8m3CwIi_/view" class="card-btn" aria-label="read more">
+                                             <i class="fa fa-play"></i>
+                                        </a>
+                        
+                                        <h3 class="h3">
+                                            <a href="https://drive.google.com/file/d/1igLWdo3bYJsk-6rOdWKJg83j8m3CwIi_/view" class="card-title">Disjunction: The Power of Logical OR</a>
+                                        </h3>
+                        
+                                        <p class="card-text">
+                                            Uncover the versatility and applications of logical disjunctions in mathematics and other scenarios.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="video-card">
+                                    <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                                            <img src="assets/img/img-videos/implication.png" width="370" height="370" loading="lazy"
+                                            alt="video" class="img-cover">
+                                    </figure>
+                    
+                                    <div class="card-content">  
+                                        <a href="https://drive.google.com/file/d/1is4vdf0fLEqn6YSyo1a1npMqg5l83g5J/view" class="card-btn" aria-label="read more">
+                                             <i class="fa fa-play"></i>
+                                        </a>
+                        
+                                        <h3 class="h3">
+                                            <a href="https://drive.google.com/file/d/1is4vdf0fLEqn6YSyo1a1npMqg5l83g5J/view" class="card-title">The Art of Implication: Understanding Logical Consequences</a>
+                                        </h3>
+                        
+                                        <p class="card-text">
+                                            Learn the fundamentals of logical implication and how it influences reasoning and problem-solving.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="video-card">
+                                    <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                                            <img src="assets/img/img-videos/negation.png" width="370" height="370" loading="lazy"
+                                            alt="video" class="img-cover">
+                                    </figure>
+                    
+                                    <div class="card-content">  
+                                        <a href="https://drive.google.com/file/d/1imjJtUg-kcRN9c_yYn71sK-jl4x7fCVV/view" class="card-btn" aria-label="read more">
+                                             <i class="fa fa-play"></i>
+                                        </a>
+                        
+                                        <h3 class="h3">
+                                            <a href="https://drive.google.com/file/d/1imjJtUg-kcRN9c_yYn71sK-jl4x7fCVV/view" class="card-title">Negation Nation: The Power of Logical Not</a>
+                                        </h3>
+                        
+                                        <p class="card-text">
+                                            Unlock the secrets of negation in logic and mathematics, and how it influences problem-solving and reasoning.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="video-card">
+                                    <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                                            <img src="assets/img/img-videos/relations.png" width="370" height="370" loading="lazy"
+                                            alt="video" class="img-cover">
+                                    </figure>
+                    
+                                    <div class="card-content">  
+                                        <a href="https://drive.google.com/file/d/1vUnCbWjiIQ4L8tkWn7IHBfFzMCJwB-RS/view" class="card-btn" aria-label="read more">
+                                             <i class="fa fa-play"></i>
+                                        </a>
+                        
+                                        <h3 class="h3">
+                                            <a href="https://drive.google.com/file/d/1vUnCbWjiIQ4L8tkWn7IHBfFzMCJwB-RS/view" class="card-title">Understanding Relations: From Sets to Structures</a>
+                                        </h3>
+                        
+                                        <p class="card-text">
+                                            Delve into the world of mathematical relations and their applications..
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="video-card">
+                                    <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                                            <img src="assets/img/img-videos/inference.png" width="370" height="370" loading="lazy"
+                                            alt="video" class="img-cover">
+                                    </figure>
+                    
+                                    <div class="card-content">  
+                                        <a href="https://drive.google.com/file/d/1vOvaPpK6Dz58r8JZ79NfDW_6cWWZOvUo/view" class="card-btn" aria-label="read more">
+                                             <i class="fa fa-play"></i>
+                                        </a>
+                        
+                                        <h3 class="h3">
+                                            <a href="https://drive.google.com/file/d/1vOvaPpK6Dz58r8JZ79NfDW_6cWWZOvUo/view" class="card-title">Mastering Rules of Inference: Logic in Action</a>
+                                        </h3>
+                        
+                                        <p class="card-text">
+                                            Explore the principles of logical inference and how they apply in mathematics.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            <li>
+                                <div class="video-card">
+                                    <figure class="card-banner img-holder has-after" style="--width: 370; --height: 370;">
+                                            <img src="assets/img/img-videos/set-theory.png" width="370" height="370" loading="lazy"
+                                            alt="video" class="img-cover">
+                                    </figure>
+                    
+                                    <div class="card-content">  
+                                        <a href="https://drive.google.com/file/d/1vPMbQZ8KwyTTE6-qapS-ruX9HWolx3Mf/view" class="card-btn" aria-label="read more">
+                                             <i class="fa fa-play"></i>
+                                        </a>
+                        
+                                        <h3 class="h3">
+                                            <a href="https://drive.google.com/file/d/1vPMbQZ8KwyTTE6-qapS-ruX9HWolx3Mf/view" class="card-title">Set Theory Unraveled</a>
+                                        </h3>
+                        
+                                        <p class="card-text">
+                                            Explore the fundamentals of set theory and its pivotal role in shaping mathematical structures and proofs.
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </article>
+        </main>
+
+        <!-- === Footer === -->
+        <footer class="footer" style="background-image: url('./assets/img/footer-bg.png')">
+            <div class="footer-top">
+                <div class="container grid-list">
+                    <div class="footer-brand">
+                        <a href="#" class="logo">
+                            <img src="assets/img/discreteHub_dark.png" width="80" height="50" alt="DiscreteHub Logo">
+                        </a>
+            
+                        <p class="footer-brand-text">
+                            Thank you for visiting DiscreteHub! 
+                            If you like to know more about us, click the links.
+                            Have a good day!
+                        </p>
+                    </div>
+                    
+                    <div class="footer-box">
+                        <ul class="footer-list">
+                             <li>
+                                <p class="footer-list-title">Other Platforms</p>
+                            </li>
+
+                            <li>
+                                <a href="about.html#about" class="footer-link">About</a>
+                            </li>
+                    
+                            <li>
+                                <a href="contact.html" class="footer-link">Contact</a>
+                            </li>
+                    
+                            <li>
+                                <a href="about.html#instructor" class="footer-link">Instructor</a>
+                            </li>
+                        </ul>
+
+                        <ul class="footer-list">
+                            <li>
+                                <p class="footer-list-title">Visit Our University</p>
+                            </li>
+                
+                            <ul class="social-list">
+                                <li>
+                                    <a href="https://web.facebook.com/lspusc" class="social-link">
+                                        <i class="fa-brands fa-facebook"></i>
+                                    </a>
+                                </li>
+                
+                                <li>
+                                    <a href="https://lspu.edu.ph/campus/home/sc" class="social-link">
+                                        <i class="fa fa-earth-asia"></i>
+                                    </a>
+                                 </li>
+                             </ul>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <div class="container">
+                        <p class="copyright">
+                            Copyright 2024 All Rights Reserved by <span class="copyright-link">DiscreteHub</span> 
+
+                            <br>
+
+                            All content on this website is either created by us, licensed for our use, used with permission, or is in the public domain. 
+                            We respect the intellectual property rights of others and aim to comply with copyright laws. If you believe that your copyright has been infringed upon, please contact us immediately.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
+        <!-- === Back to Top === -->
+        <a href="#" class="back-top-btn" aria-label="Back to top" data-back-top-btn>
+            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+        </a>
+        
+        <!-- === JS === -->
+        <script text="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script text="text/javascript" src="assets/js/second-script.js"></script>
+        <script text="text/javascript" src="assets/js/style-switch.js"></script>
+    </body>
+</html>

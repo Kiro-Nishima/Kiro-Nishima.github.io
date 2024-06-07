@@ -1,0 +1,96 @@
+
+/* ==== Style Switch ==== */
+.style-switch {
+    position: fixed;
+    width: 200px;
+    height: 70px;
+    top: 30px;
+    right: 0;
+    padding: 15px;
+    background: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    border-radius: 5px;
+    transition: all 0.4s ease;
+    transform: translateX(100%);
+}
+
+.style-switch.open {
+    transform: translateX(0);
+}
+
+.style-switch-toggle {
+    top: 0;
+}
+
+.theme-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: var(--text-black-900);
+}
+
+.theme-close i {
+    font-size: 1rem;
+}
+
+.theme-close:hover {
+    color: var(--skin-color-1);
+}
+
+.style-switch .s-icon {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    right: 100%;
+    margin-right: 25px;
+    font-size: 20px;
+    text-align: center;
+    color: var(--text-black-900);
+    border: 1px solid var(--bg-black-50);
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.lumos-nox {
+    font-size: 16px;
+}
+
+.style-switch h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 5px;
+    color: var(--text-black-700);
+}
+
+.colors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.colors span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-top: -1rem;
+    border-radius: 50%;
+}
+
+.color-1 {
+    background:  #FFA500;
+}
+
+ .color-2 {
+    background: #E43D12;
+}
+
+.color-3 {
+    background: #D6536D;
+}
+
+.color-4 {
+    background: #5c53d6;
+}
+.color-5 {
+    background: #53d6ba;
+}   

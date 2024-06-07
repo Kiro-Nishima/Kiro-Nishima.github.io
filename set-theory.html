@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- === meta === -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DiscreteHub</title>
+
+        <!-- === Favicon === -->
+        <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" size="180x180" href="assets/img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" size="512x512" href="assets/img/android-chrome-512x512.png">
+        <link rel="icon" type="image/png" size="192x192" href="assets/img/android-chrome-192x192.png">
+        <link rel="icon" type="image/png" size="32x32" href="assets/img/favicon-32x32.png">
+        <link rel="icon" type="image/png" size="16x16" href="assets/img/favicon-16x16.png">
+        <link rel="icon" type="image/png" href="assets/img/site.webmanifest">
+
+        <!-- === CSS === -->
+        <link type="text/css" rel="stylesheet" href="assets/css/sub-topic.css">
+        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- === Style Switch -->
+        <link type="text/css" rel="stylesheet" href="assets/css/style-switch.css">
+        <link type="text/css" rel="stylesheet" href="assets/css/skins/color-1.css" class="alternate-style" title="color-1">
+        <link type="text/css" rel="stylesheet" href="assets/css/skins/color-2.css" class="alternate-style" title="color-2" disabled="true">
+        <link type="text/css" rel="stylesheet" href="assets/css/skins/color-3.css" class="alternate-style" title="color-3" disabled="true">
+        <link type="text/css" rel="stylesheet" href="assets/css/skins/color-4.css" class="alternate-style" title="color-4" disabled="true">
+        <link type="text/css" rel="stylesheet" href="assets/css/skins/color-5.css" class="alternate-style" title="color-5" disabled="true">
+    </head>
+
+    <body>
+        <!-- === Header === -->
+        <header class="header" data-header>
+            <div class="container" style="background-image: url(./assets/img/footer-bg.png);">
+                <a href="#home" class="logo">
+                    <img src="assets/img/discreteHub_dark.png" width="80" height="50" alt="DiscreteHub Home">
+                </a>
+
+                <nav class="navbar" data-navbar>
+                    <div class="wrapper">
+                        <a href="#home" class="logo">
+                            <img src="assets/img/discreteHub_light.svg" width="80" height="50" alt="DiscreteHub Home">
+                        </a>
+                        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+                            <i class="fa fa-xmark" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <ul class="navbar-list">
+                        <li class="navbar-item">
+                            <i class="fa fa-home"></i>
+                            <a href="index.html#home" class="navbar-link" data-nav-link>Home</a>
+                        </li>
+
+                        <li class="navbar-item">
+                            <i class="fa fa-file-lines"></i>
+                            <a href="module.html" class="navbar-link" data-nav-link>Modules</a>
+                        </li>
+
+                        <li class="navbar-item">
+                            <i class="fa fa-newspaper"></i>
+                            <a href="topics.html" class="navbar-link" data-nav-link>Topics</a>
+                        </li>
+
+                        <li class="navbar-item">
+                            <i class="fa fa-video"></i>
+                            <a href="videos.html" class="navbar-link" data-nav-link>Videos</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="header-action-btn nav-toggle" aria-label="open menu" data-nav-toggler>
+                        <i class="fa fa-compass"></i>
+                    </button>
+
+                    <button class="header-action-btn lumos-nox s-icon" aria-label="lumos-nox">
+                        <i class="fas"></i>
+                    </button>
+
+                    <button class="header-action-btn style-switch-toggle" aria-label="toggle switch-style">
+                        <i class="fa fa-cog fa-spin"></i>
+                    </button>
+
+                    <div class="overlay" data-nav-toggler data-overlay></div>
+                </div>
+            </div>
+
+            <!-- === Style Switch -->
+            <div class="style-switch show-theme">
+                <h4>Theme Color</h4>
+
+                <div class="theme-close" id="theme_close">
+                    <i class="fa fa-xmark"></i>
+                </div>
+
+                <div class="colors" id="color">
+                    <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+                    <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+                    <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+                    <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+                    <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+                </div>
+            </div>
+        </header>
+
+        <div class="background">
+            <div class="wave wave-1"></div>
+            <div class="wave wave-2"></div>
+            <div class="wave wave-3"></div>
+            <div class="wave wave-4"></div>
+            <div class="wave wave-5"></div>
+        </div>
+
+        <!-- === Main === -->
+        <main>
+            <article>
+                <!-- === Topics === -->
+                <section class="section topic" id="topics" aria-label="topic">
+                    <div class="container">
+                        <div class="card-content">
+                            <figure class="card-banner img-holder" style="--width: 400; --height: 220;">
+                                <img src="./assets/img/img-topics/set-theory/Slide1.PNG" width="400" height="220" loading="lazy"
+                                alt="topic" class="img-cover">
+                            </figure>         
+                            
+                            <figure class="card-banner img-holder" style="--width: 400; --height: 220;">
+                                <img src="./assets/img/img-topics/set-theory/Slide2.PNG" width="400" height="220" loading="lazy"
+                                alt="topic" class="img-cover">
+                            </figure>  
+                            
+                            <figure class="card-banner img-holder" style="--width: 400; --height: 220;">
+                                <img src="./assets/img/img-topics/set-theory/Slide3.PNG" width="400" height="220" loading="lazy"
+                                alt="topic" class="img-cover">
+                            </figure>
+
+                            <figure class="card-banner img-holder" style="--width: 400; --height: 220;">
+                                <img src="./assets/img/img-topics/set-theory/Slide4.PNG" width="400" height="220" loading="lazy"
+                                alt="topic" class="img-cover">
+                            </figure>
+
+                            <figure class="card-banner img-holder" style="--width: 400; --height: 220;">
+                                <img src="./assets/img/img-topics/set-theory/Slide5.PNG" width="400" height="220" loading="lazy"
+                                alt="topic" class="img-cover">
+                            </figure>
+
+                            <figure class="card-banner img-holder" style="--width: 400; --height: 220;">
+                                <img src="./assets/img/img-topics/set-theory/Slide6.PNG" width="400" height="220" loading="lazy"
+                                alt="topic" class="img-cover">
+                            </figure>
+
+                            <figure class="card-banner img-holder" style="--width: 400; --height: 220;">
+                                <img src="./assets/img/img-topics/set-theory/Slide7.PNG" width="400" height="220" loading="lazy"
+                                alt="topic" class="img-cover">
+                            </figure>
+
+                            <figure class="card-banner img-holder" style="--width: 400; --height: 220;">
+                                <img src="./assets/img/img-topics/set-theory/Slide8.PNG" width="400" height="220" loading="lazy"
+                                alt="topic" class="img-cover">
+                            </figure>
+
+                            <figure class="card-banner img-holder" style="--width: 400; --height: 220;">
+                                <img src="./assets/img/img-topics/set-theory/Slide9.PNG" width="400" height="220" loading="lazy"
+                                alt="topic" class="img-cover">
+                            </figure>
+                          
+                            <figure class="card-banner img-holder" style="--width: 400; --height: 220;">
+                                <img src="./assets/img/img-topics/slide-quiz.png" width="400" height="220" loading="lazy"
+                                alt="topic" class="img-cover">
+
+                                <button class="btn-play btn has-before" id="play-btn">
+                                    <a href="#quiz">
+                                        Play
+                                    </a>
+                                </button>
+                            </figure>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section quiz hide" id="quiz" aria-label="quiz">
+                    <div class="container">
+                        <div class="quiz-app">
+                            <h2>
+                                Set Theory
+                            </h2>
+
+                            <div class="quizzes">
+                                <h3 class="question" id="question">[insert]</h3>
+                                <div class="answer-btn" id="answer-btn">
+                                    <button class="btn-answer">I'm the answer</button>
+                                    <button class="btn-answer">I'm the answer</button>
+                                    <button class="btn-answer">I'm the answer</button>
+                                    <button class="btn-answer">I'm the answer</button>
+                                </div>
+                                <button class="next-btn" id="next-btn">Next</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </main>
+        
+        <!-- === Back to Top === -->
+        <a href="#" class="back-top-btn" aria-label="Back to top" data-back-top-btn>
+            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+         </a>
+        
+        <!-- === JS === -->
+        <script text="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js" integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script text="text/javascript" src="assets/js/topics/set-theory.js"></script>
+        <script text="text/javascript" src="assets/js/style-switch.js"></script>
+    </body>
+</html>
